@@ -54,3 +54,30 @@ MIXUE_CABANG_MI =("""
 3. Mi Sundae: Rp14000
 4. Mi Ganas: Rp11000
 5. Creamy Mango Boba: Rp22000
+""")
+
+print (MIXUE_CABANG_MI)
+
+#Input user untuk memilih pesanan
+pilih_menu = int(input ("tulis pesanan sesuai angka : ")) - 1
+#untuk membaca array menu supaya user tidak salah input
+keranjang_saya = Keranjang_Saya(MENU[pilih_menu ][0], MENU[pilih_menu ][1]) 
+
+#menanyakan kepada user mau tambah pesanan atau tidak 
+tambah_pesanan = input("Apakah tambahan pesanan? (y/t)")
+
+#looping untuk input dari user
+while True :
+    #program jika user menginput "y"
+    if tambah_pesanan == "y" :
+       pilih_tambahan = int(input("Pesanan tambahan : ")) - 1
+       #menambahkan pesanan kedalam keranjang 
+       keranjang_saya.tambahkan_pesanan(MENU[pilih_tambahan][0], MENU[pilih_tambahan][1]) 
+       tambah_pesanan = input("Apakah tambah pesanan? (y/t)")
+
+    #program jika user menginput "t"
+    else :
+        #untuk menampilkan pesanan dan total harga
+        keranjang_saya.tampilkan_keranjang()
+        keranjang_saya.total_pesanan()
+        break 
