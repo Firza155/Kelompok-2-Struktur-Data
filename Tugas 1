@@ -25,3 +25,32 @@ class Keranjang_Saya :
     #Fungsi untuk menampilkan pesanan
     def tampilkan_keranjang(self):
         keranjang = self.head
+
+    #looping menampilkan menu dan harga pesanan 
+        while keranjang:
+            print (f"{keranjang.menu} : {keranjang.harga}")
+            keranjang = keranjang.next
+
+    #Fungsi untuk menotalkan harga semua pesanan
+    def total_pesanan(self):
+        total = 0
+        
+        keranjang = self.head
+        #looping total harga pesanan yang ada dikeranjang 
+        while keranjang:
+            total += keranjang.harga
+            keranjang = keranjang.next
+        
+        print(f"Total Harga Pesanan: Rp{total}")
+
+#Array menu yang disediakan 
+MENU = [["Mixue Ice Cream", 5_000], ["Boba Shake", 16_000], ["Mi Sundae", 14_000], ["Mi Ganas", 11_000], ["Creamy Mango Boba", 22_000]]
+
+#daftar menu 
+MIXUE_CABANG_MI =("""                               
+===== DAFTAR MENU ===== 
+1. Mixue Ice Cream: Rp5000
+2. Boba Shake: Rp16000
+3. Mi Sundae: Rp14000
+4. Mi Ganas: Rp11000
+5. Creamy Mango Boba: Rp22000
