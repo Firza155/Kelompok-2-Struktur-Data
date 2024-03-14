@@ -1,1 +1,27 @@
+print ("===SELAMAT DATANG DI RESTORAN KAMI===\n")
+print (""" Nama Kelompok: 
+       1. FIRZA MUSHERMANSYAH (23091397155)
+       2. UMAR FARUQ (23091397157)
+       3. PINGKY DWI SAFITRI (23091397172)
+""")
 
+#LinkedList dari Keranjang
+class Keranjang :
+    def __init__(self, menu, harga, next = None):
+        self.menu = menu
+        self.harga = harga 
+        self.next = next
+
+#LinkedList dari Keranjang_Saya
+class Keranjang_Saya : 
+    def __init__(self, menu, harga):
+          self.head = Keranjang(menu, harga)
+    
+    #Fungsi untuk menambah pesanan
+    def tambahkan_pesanan(self, menu, harga):
+        keranjang = Keranjang (menu, harga, self.head)
+        self.head = keranjang 
+    
+    #Fungsi untuk menampilkan pesanan
+    def tampilkan_keranjang(self):
+        keranjang = self.head
