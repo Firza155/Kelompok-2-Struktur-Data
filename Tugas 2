@@ -61,3 +61,35 @@ PetaUzbekistan = ["Almalyk", "Angren", "Pop", "Kokand", "Namangan", "Margilan", 
 Uzbekistan = Peta() 
 #untuk memasukkan nama kota di dalam class
 for kota in PetaUzbekistan :
+Uzbekistan.tambahKota(kota) 
+
+#aturan untuk input nama kota
+print("""
+*HARAP MEMASUKKAN NAMA KOTA SESUAI DENGAN DAFTAR DI BAWAH (huruf besar dan huruf kecilnya)
+      
+=====DAFTAR KOTA=====
+""")
+
+#menambahkan jarak antar kota yang dilewati
+Uzbekistan.tambahJalan("Almalyk", "Angren", "Jarak: 53km")
+Uzbekistan.tambahJalan("Angren", "Kokand", "Jarak: 134km")
+Uzbekistan.tambahJalan("Angren", "Pop", "Jarak: 125km")
+Uzbekistan.tambahJalan("Kokand", "Pop", "Jarak: 50,5km")
+Uzbekistan.tambahJalan("Kokand", "Margilan", "Jarak: 77km")
+Uzbekistan.tambahJalan("Kokand", "Fergana", "Jarak: 88,7km")
+Uzbekistan.tambahJalan("Pop", "Namangan", "Jarak: 58km")
+Uzbekistan.tambahJalan("Namangan", "Andijan", "Jarak: 69,2km")
+Uzbekistan.tambahJalan("Margilan", "Asaka", "Jarak: 54,8km")
+Uzbekistan.tambahJalan("Margilan", "Marhamat", "Jarak: 54,5km")
+Uzbekistan.tambahJalan("Marhamat", "Asaka", "Jarak: 24,3km")
+Uzbekistan.tambahJalan("Asaka", "Andijan", "Jarak: 24,9km")
+
+#memanggil metode printKota untuk menampilkan daftar kota
+Uzbekistan.printKota()
+
+#variabel untuk menginput lokasi saat ini
+lokasi = input("lokasi anda sekarang : ")
+#variabel untuk memilih lokasi yang di tuju
+pilihlokasitujuan = input("tujuan yang ingin di tuju : ")
+#menampilkan jarak tempuh dari kota lokasi ke kota tujuan 
+Uzbekistan.ruteTempuh(lokasi, pilihlokasitujuan)
